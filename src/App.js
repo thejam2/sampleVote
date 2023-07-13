@@ -119,22 +119,12 @@ function App() {
     copyData.splice(destination, 0, formData[source]);
     setFormData(copyData);
 
-    //[boxState[destination], boxState[source]] = [boxState[source], boxState[destination]];
-    //console.log(boxState)
+    
   };
 
   const onSubmitHandle = (e) => {
     console.log(storeState);
-    // let copy = [...storeState];
-    // copy = copy.map((v) => {
-    //   return {
-    //     ...v,
-    //     answerText: "test",
-    //     checked:[],
-    //     etcText:'',
-    //   };
-    // });
-    // console.log(copy);
+    
   };
 
   const preViewClick = () => {
@@ -195,22 +185,6 @@ function App() {
             formDataHandle={formDataHandle}
           />
         </Box>
-
-        {/* {boxState.map((v) => (
-          <Box key={v}>
-            <VoteBox preViewState={preViewState} />
-
-            {!preViewState && (
-              <Button
-                variant="contained"
-                onClick={() => removeBox(v)}
-                style={{ marginTop: "20px" }}
-              >
-                박스 삭제
-              </Button>
-            )}
-          </Box>
-        ))} */}
 
         <DragDropContext onDragEnd={(e) => onDragEnd(e)}>
           <div>

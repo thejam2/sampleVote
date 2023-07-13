@@ -11,20 +11,8 @@ let formData = createSlice({
 });
 export let {updateForm} = formData.actions
 
-// let formResultData = createSlice({
-//     name: "formResultData",
-//     initialState: [],
-//     reducers : {
-//       updateResult(state, action){
-//           return action.payload
-//       }
-//     }
-//   });
-// export let {updateResult} = formResultData.actions
-
 export default configureStore({
   reducer: {
     formData : formData.reducer,
-    //formResultData : formResultData.reducer,
   },
 });
